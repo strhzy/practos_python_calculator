@@ -64,7 +64,10 @@ while (True):
         case 7:
             try:
                 a = int(input("Введите число "))
-                print("Результат ",math.factorial(a))
+                if a>0:
+                    print("Результат ",math.factorial(a))
+                else:
+                    print("Нужно ввести число больше 0")
             except ValueError:
                 print("Надо вводить число")
         case 8:
