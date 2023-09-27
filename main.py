@@ -12,48 +12,81 @@ while (True):
     print("9.Косинус")
     print("10.Тангенс")
     print("11.Выход из программы")
-    choice = int(input())
+    try:
+        choice = int(input())
+    except ValueError:
+        print("Надо вводить число")
     match choice:
         case 1:
-            a = int(input("Введите первое число "))
-            b = int(input("Введите второе число "))
-            print("Результат ",a + b)
+            try:
+                a = int(input("Введите первое число "))
+                b = int(input("Введите второе число "))
+                print("Результат ",a + b)
+            except ValueError:
+                print("Надо вводить число")
         case 2:
-            a = int(input("Введите первое число "))
-            b = int(input("Введите второе число "))
-            print("Результат ", a - b)
+            try:
+                a = int(input("Введите первое число "))
+                b = int(input("Введите второе число "))
+                print("Результат ", a - b)
+            except ValueError:
+                print("Надо вводить число")
         case 3:
-            a = int(input("Введите первое число "))
-            b = int(input("Введите второе число "))
-            print("Результат ", a * b)
+            try:
+                a = int(input("Введите первое число "))
+                b = int(input("Введите второе число "))
+                print("Результат ", a * b)
+            except ValueError:
+                print("Надо вводить число")
         case 4:
-            a = int(input("Введите первое число "))
-            b = int(input("Введите второе число "))
-            if b==0:
-                print("На ноль делить нельзя")
-            else:
-                print("Результат ", a / b)
+            try:    
+                a = int(input("Введите первое число "))
+                b = int(input("Введите второе число "))
+                if b==0:
+                    print("На ноль делить нельзя")
+                else:
+                    print("Результат ", a / b)
+            except ValueError:
+                print("Надо вводить число")
         case 5:
-            a = int(input("Введите число "))
-            b = int(input("Введите степень "))
-            print("Результат ", a ** b)
+            try:
+                a = int(input("Введите число "))
+                b = int(input("Введите степень "))
+                print("Результат ", a ** b)
+            except ValueError:
+                print("Надо вводить число")
         case 6:
-            a = int(input("Введите число "))
-            print("Результат ",a**0.5)
+            try:
+                a = int(input("Введите число "))
+                print("Результат ",a**0.5)
+            except ValueError:
+                print("Надо вводить число")
         case 7:
-            a = int(input("Введите число "))
-            print("Результат ",math.factorial(a))
+            try:
+                a = int(input("Введите число "))
+                print("Результат ",math.factorial(a))
+            except ValueError:
+                print("Надо вводить число")
         case 8:
-            a = int(input("Введите угол(в градусах) "))
-            a = math.radians(a)
-            print("Результат ",math.sin(a))
+            try:
+                a = int(input("Введите угол(в градусах) "))
+                a = math.radians(a)
+                print("Результат ",math.sin(a))
+            except ValueError:
+                print("Надо вводить число")
         case 9:
-            a = int(input("Введите угол(в градусах) "))
-            a = math.radians(a)
-            print("Результат ",math.cos(a))
+            try:
+                a = int(input("Введите угол(в градусах) "))
+                a = math.radians(a)
+                print("Результат ",math.cos(a))
+            except ValueError:
+                print("Надо вводить число")
         case 10:
-            a = int(input("Введите угол(в градусах) "))
-            a = math.radians(a)
-            print("Результат ", math.tan(a))
+            try:
+                a = int(input("Введите угол(в градусах) "))
+                a = math.radians(a)
+                print("Результат ", math.tan(a))
+            except ValueError:
+                print("Надо вводить число")
         case 11:
             break
